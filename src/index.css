@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #666666; /* Gray background */
+  color: #ffffff; /* White text */
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+

@@ -1,0 +1,83 @@
+.water-wave-btn {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.water-wave-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  transition: height 0.6s ease;
+  z-index: -1;
+  border-radius: 9999px;
+}
+
+.water-wave-btn:hover {
+  color: white;
+}
+
+.water-wave-btn:hover::before {
+  height: 100%;
+  animation: waveRise 0.6s ease forwards;
+}
+
+.water-wave-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 40%;
+  transform: translateX(-50%) translateY(75%) rotate(0deg);
+  animation: waveMotion 4s linear infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.water-wave-btn:hover::after {
+  opacity: 1;
+  animation: 
+    waveMotion 4s linear infinite,
+    waveAppear 0.6s ease forwards;
+}
+
+@keyframes waveRise {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes waveMotion {
+  0% {
+    transform: translateX(-50%) translateY(75%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(65%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(75%) rotate(360deg);
+  }
+}
+
+@keyframes waveAppear {
+  0% {
+    transform: translateX(-50%) translateY(100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(75%) rotate(0deg);
+  }
+}
+
+
