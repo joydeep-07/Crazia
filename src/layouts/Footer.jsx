@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="lg:w-1/3 text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start mb-4">
               <span className="text-2xl sm:text-3xl lg:text-4xl font-bold">
-                Crezia.io
+                Crazia.io
               </span>
             </div>
             <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-md leading-relaxed mx-auto lg:mx-0">
