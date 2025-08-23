@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 md:px-12 md:py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <span className="text-2xl font-semibold ">Crezia.io</span>
+          <span className="text-2xl font-semibold ">Crazia.io</span>
 
           {/* Hamburger menu for mobile */}
           {isMobile && (
